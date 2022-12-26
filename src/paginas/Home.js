@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Redirect } from "react-router-dom";
+ import { useNavigate } from "react-router-dom";
 import './DefinirCss.css';
 import imagem1 from './../imagens/aoAshi.jpg'
 import imagem2 from './../imagens/naruto.jpg';
@@ -10,12 +10,13 @@ import {motion} from 'framer-motion'
 const images = [imagem1, imagem2, imagem3, imagem4]
 
 function Home() {
+  let navigate = useNavigate();
   const carosel = useRef();
   const [largura, setLargura ] = useState()
 
   function onclick(e) {
     debugger;
-  <Redirect from="/" to="/Pagina1"></Redirect>
+  navigate("/Pagina1")
 
   }
 
@@ -25,7 +26,7 @@ function Home() {
   },[])
   return (
     <div className="App">
-      <motion.div ref={carosel}className='carosel' whileTap={{ cursor: "grabbing"}}>
+      <motion.div ref={carosel} className='carosel' whileTap={{ cursor: "grabbing"}}>
       <motion.div className='inner' drag="x" dragConstraints={{ right:0, left: -largura}}>
         {images.map(imagem => (
           <motion.div className='item' key={imagem}>

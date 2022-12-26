@@ -25,5 +25,5 @@
 
 .carosel{
   cursor:grab;
-  overflow: hidden;
+  overflow: scroll;
 }
