@@ -16,6 +16,7 @@ function Home() {
 
   function onclick(e) {
     debugger;
+    console.log(e);
   navigate("/Pagina1")
 
   }
