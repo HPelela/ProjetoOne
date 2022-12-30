@@ -1,32 +1,13 @@
 .App {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
 }
 
 .inner{
   display: flex !important;
-  height: 450px;
 }
 
-.item{
-  max-height: 500px;
-  min-width: 400px;
-  height: 500px;
-}
-
-.item img{
-  width: 100%;
-  height: 90%;
-  border-radius: 12px;
-}
-
-.carosel{
-  overflow-x: auto;
+.img{
+  overflow-x: hidden;
   overflow-y: hidden;
 }
 
@@ -35,11 +16,12 @@
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #e4e4e4;
+  background-color: #f5f5f5;
   border-radius: 100px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #e4e4e4;
+  background-color: #cbeb1b;
   border-radius: 100px;
 }
+
